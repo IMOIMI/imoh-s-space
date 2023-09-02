@@ -115,7 +115,7 @@ function checkEmail() {
         , requiredMessage);
     } else if (!isEmailValid(email)) {
         showError(emailInput
-        , 'Email is not correct.')
+        , 'invalid Email.')
     } else {
         showSuccess(emailInput
         );
@@ -133,7 +133,7 @@ function checkPassword  ()  {
     if (!isRequired(password)) {
         showError(passwordInput, requiredMessage);
     } else if (!isPasswordSecure(password)) {
-        showError(passwordInput, 'Password must has at least 7 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character ex. (!@#$%^&*)');
+        showError(passwordInput, 'Password must has at least 7 characters that have  1 uppercase character, 1 lowercase characters, 1 number, and 1 special characters');
     } else {
         showSuccess(passwordInput);
         valid = true;
@@ -178,7 +178,7 @@ form.addEventListener('submit', function (e) {
         isEmailValid = checkEmail(),
         isLastNameValid =checkLastname(),
         isPasswordValid = checkPassword(),
-        ispasswordagaindaddyValid = checkConfirmPassword(),
+        ispasswordagaindaddyValid = passwordagaindaddy(),
         isFirstnameValid = checkFirstname(),
         isTandCCheckedValid = isTandCChecked();
 
